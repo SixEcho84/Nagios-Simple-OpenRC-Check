@@ -1,6 +1,6 @@
 #!/bin/sh
 
-crashed=$(rc-status --crashed)
+crashed=$(sudo /bin/rc-status --crashed)
 
 if [ -n "$crashed" ]; then
         echo "CRITICAL: crashed services: ${crashed//$'\n'/, }"
